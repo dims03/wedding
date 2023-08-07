@@ -294,6 +294,9 @@ body {
   right: auto;
 }
 
+.footer .bi-heart-fill {
+  color: var(--pink);
+}
 /* Media Query */
 
 /* Extra large */
