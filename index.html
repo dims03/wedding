@@ -42,7 +42,10 @@
               <span class="countdown-label">Seconds</span>
             </div>
         </div>
-        <a href="#home" class="btn btn-lg mt-3">Lihat Undangan</a>
+        <a href="#home" class="btn btn-lg mt-3" id-"playButton">Lihat Undangan</a>
+        <audio id="myAudio"> 
+            <source src="music/backsound.mp3" type="audio/mpeg">
+       </audio>
       </main>
     </section>
 
@@ -293,6 +296,17 @@
       
         // Initial call to populate the countdown
         updateCountdown();
-      </script>  
+      </script> 
+
+     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const playButton = document.getElementById("playButton");
+          const audio = document.getElementById("myAudio");
+      
+          playButton.addEventListener("click", function() {
+            audio.play();
+          });
+        });
+      </script>
   </body>
 </html>
