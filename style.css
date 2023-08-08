@@ -315,8 +315,8 @@ body {
   html {
     font-size: 75%;
   }
-  .simply-countdown > .simply-countdown {
-    padding: 70px;
+  .info {
+    padding-bottom: 10rem;
   }
   .home .heart {
     display: none;
@@ -352,9 +352,8 @@ body {
   html {
     font-size: 65%;
   }
-  .simply-countdown > .simply-countdown {
-    padding: 60px;
-    margin: 5px;
+.info {
+    padding-bottom: 15rem;
   }
 
   .mynavbar .nav-link {
@@ -375,9 +374,8 @@ body {
   html {
     font-size: 60%;
   }
-  .simply-countdown > .simply-countdown {
-    padding: 45px;
-    margin: 3px;
+  .info {
+    padding-bottom: 25rem;
   }
   .timeline li .timeline-image {
     width: 75px;
