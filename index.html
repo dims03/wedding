@@ -24,7 +24,24 @@
         <h4>Undangan</h4>
         <h1>Dimas Prayogi & Khairiyani</h1>
         <p>Akan melangsungkan acara pernikahan</p>
-        <!-- <div class="simply-countdown"></div> -->
+        <div class="countdown">
+            <div class="countdown-item">
+              <span class="countdown-value" id="days">00</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="hours">00</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="minutes">00</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="seconds">00</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+        </div>
         <a href="#home" class="btn btn-lg mt-3">Lihat Undangan</a>
       </main>
     </section>
@@ -142,7 +159,7 @@
           <div class="col-md-8 col-10 text-center">
             <span>Bagaimana Kami Bertemu</span>
             <h2>Our Story</h2>
-            <p>"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya dan Dia menjadikan di antaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir." <b>(QS. Ar Rum Ayat 21)</b></p>
+            <p>Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya dan Dia menjadikan di antaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir. <b>(QS. Ar Rum Ayat 21)</b></p>
           </div>
         </div>
 
@@ -251,5 +268,31 @@
       });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    
+    <script>
+        // Set the date for the countdown (YYYY, MM - 1, DD)
+        const weddingDate = new Date(2024, 3, 27);
+      
+        function updateCountdown() {
+          const now = new Date().getTime();
+          const timeRemaining = weddingDate - now;
+      
+          const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+      
+          document.getElementById("days").textContent = days.toString().padStart(2, "0");
+          document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+          document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+          document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+        }
+      
+        // Update the countdown every second
+        setInterval(updateCountdown, 1000);
+      
+        // Initial call to populate the countdown
+        updateCountdown();
+      </script>  
   </body>
 </html>
