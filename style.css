@@ -40,7 +40,7 @@ body {
 
 .hero h4 {
   font-size: 1.6rem;
-  font-family: "Work Sans", sans-serif;
+  font-family: "IBM Plex Serif", serif;
 }
 
 .hero p {
@@ -297,6 +297,21 @@ body {
 .footer .bi-heart-fill {
   color: var(--pink);
 }
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.igdimas,
+.igyanee {
+  font-size: 1rem;
+  color: #0a0a0a;
+  text-decoration: none;
+  font-family: "IBM Plex Serif", serif;
+}
+.gallery {
+  background-color: #f5f5f5;
+}
 /* Media Query */
 
 /* Extra large */
@@ -304,10 +319,6 @@ body {
   .home .heart {
     transform: translateX(-50%) translateY(45px);
   }
-}
-
-.gallery {
-  background-color: #f5f5f5;
 }
 
 /* laptop */
