@@ -3,7 +3,23 @@
   --bg: #0a0a0a;
   --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
 }
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: var(--pink);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: none;
+  cursor: pointer;
+}
 
+.scroll-to-top i {
+  font-size: 2rem;
+  line-height: 40px;
+}
 body {
   font-size: 1.2rem;
   min-height: 4000px;
