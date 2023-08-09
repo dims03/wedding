@@ -1,7 +1,7 @@
 :root {
   --pink: #f14e95;
   --bg: #0a0a0a;
-  --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+  --shadow: 0 5px 5px rgb(0 0 0 / 0.7);
 }
 .scroll-to-top {
   position: fixed;
@@ -50,6 +50,7 @@ body {
 .countdown-label {
   margin-top: 5px;
   color: #fff;
+  text-shadow: var(--shadow);
   font-family: "IBM Plex Serif", serif;
 }
 .hero::before {
@@ -458,7 +459,9 @@ body {
   html {
     font-size: 60%;
   }
-
+  .hero::before {
+    background-image: url(img/bg3.jpg);
+  }
   .mynavbar {
     background-color: rgba(255, 255, 255, 0.3) !important;
     backdrop-filter: blur(5px);
