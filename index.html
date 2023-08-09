@@ -10,31 +10,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=IBM+Plex+Serif&family=Work+Sans:wght@100;300;400;600;700&display=swap" rel="stylesheet" />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
-    <!-- Countdown Time -->
-    <!-- <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
-    <script src="countdown/simplyCountdown.min.js"></script> -->
 
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
   </head>
   <body>
+
+    <div id="scrollToTopBtn" class="scroll-to-top">
+      <i class="bi bi-arrow-up-square-fill"></i>
+    </div>
     <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
-      <main>
-        <h4>Kepada Bapak/Ibu/Saudara/i,</h4>
+      <main>  
+        <h4>Undangan</h4>
         <h1>Dimas Prayogi & Khairiyani</h1>
-        <p>Akan melangsungkan resepsi pernikahan</p>
-        <!-- <div class="simply-countdown"></div> -->
-        <a href="#home" class="btn btn-lg mt-3">Lihat Undangan</a>
+        <p>Akan melangsungkan acara pernikahan</p>
+        <div class="countdown">
+            <div class="countdown-item">
+              <span class="countdown-value" id="days">00</span>
+              <span class="countdown-label">Hari</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="hours">00</span>
+              <span class="countdown-label">Jam</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="minutes">00</span>
+              <span class="countdown-label">Menit</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="seconds">00</span>
+              <span class="countdown-label">Detik</span>
+            </div>
+        </div>
+        <a href="#home" class="btn btn-lg mt-3" id="playButton">Lihat Undangan</a>
+        <audio id="myAudio"> 
+            <source src="music/backsound.mp3" type="audio/mpeg">
+       </audio>
       </main>
     </section>
 
     <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
-      <div class="container">
-        <a class="navbar-brand" href="#">Dims & Yani Wedding</a>
+      <div class="container"> 
+            <a class="navbar-brand" href="#">Dims & Yani Wedding</a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Dims & Yani Wedding</h5>
@@ -46,110 +72,116 @@
               <a class="nav-link" href="#info">Info</a>
               <a class="nav-link" href="#story">Story</a>
               <a class="nav-link" href="#gallery">Gallery</a>
-              <a class="nav-link" href="#gifts">Gifts</a>
             </div>
           </div>
         </div>
       </div>
     </nav>
-
     <section id="home" class="home">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8 text-center">
-            <h2>Acara Pernikahan</h2>
-            <h4>Diselenggarakan Pada 27 April 2024 di Samarinda</h4>
-            <p>Oleh karena itu dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu/Saudara/i, untuk hadir pada acara pernikahan kami.</p>
+        <div data-aos="fade-down">
+          <div class="row justify-content-center">
+          <div class="col-md-8 text-center">                
+                    <h2>Acara Pernikahan</h2>
+                    <h4>Diselenggarakan Pada 27 April 2024 di Samarinda</h4>
+                    <p>Oleh karena itu dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu/Saudara/i, untuk hadir pada acara pernikahan kami.</p>    
+          </div>
           </div>
         </div>
-
-        <div class="row couple">
-          <div class="col-lg-6">
-            <div class="row">
-              <div class="col-8 text-end">
-                <h3>Dimas Prayogi</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestias, repellat aperiam soluta iste eius?</p>
-                <p>
-                  Putra pertama dari Bpk. Suwardi Razak <br />
-                  dan <br />
-                  Ibu Siti Nariya
-                </p>
-              </div>
-              <div class="col-4">
-                <img src="img/Dims.png" alt="Dimas Prayogi" class="img-responsive rounded-circle" />
-              </div>
-            </div>
-          </div>
-
-          <span class="heart"><i class="bi bi-heart-fill"></i></span>
-
-          <div class="col-lg-6">
-            <div class="row">
-              <div class="col-4">
-                <img src="img/Yanee.png" alt="Khairiyani" class="img-responsive rounded-circle" />
-              </div>
-              <div class="col-8">
-                <h3>Khairiyani</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestias, repellat aperiam soluta iste eius?</p>
-                <p>
-                  Putri terakhir dari Bpk. Adnan <br />
-                  dan <br />
-                  Ibu Dariyati
-                </p>
-              </div>
-            </div>
+        <div data-aos="fade-up">
+          <div class="row couple"> 
+              <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-8 text-end">
+                        <h3>Dimas Prayogi</h3>
+                        <a href="https://www.instagram.com/den.dimss/" class="igdimas">@den.dimss </a><i class="bi bi-instagram"></i>
+                        <p>
+                            Putra pertama dari Bpk. Suwardi Razak <br />
+                            dan <br />
+                            Ibu Siti Nariya
+                        </p>
+                        </div>
+                        <div class="col-4">
+                        <img src="img/Dims.png" alt="Dimas Prayogi" class="img-responsive rounded-circle" />
+                        </div>
+                    </div>
+              </div> 
+            <span class="heart"><i class="bi bi-heart-fill"></i></span>     
+              <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="img/Yanee.png" alt="Khairiyani" class="img-responsive rounded-circle" />
+                        </div>
+                        <div class="col-8">
+                            <h3>Khairiyani</h3>
+                            <i class="bi bi-instagram"><a href="https://www.instagram.com/khriyni/" class="igyanee"> @khriyni</a></i>
+                            <p>
+                            Putri terakhir dari Bpk. Adnan <br />
+                            dan <br />
+                            Ibu Dariyati
+                            </p>
+                        </div>
+                    </div>
+              </div>            
           </div>
         </div>
-      </div>
     </section>
-
-    <section id="info" class="info">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-10 text-center">
-            <h2>Informasi Acara</h2>
-            <p class="alamat">Alamat: JL. Jakarta Perum Korpri Blok CL No 18 RT 66 (Loa Bakung)</p>
-            <a href="https://goo.gl/maps/MeoWAmuLoQqp17Pr7" target="_blank" class="btn btn-light btn-sm my-3">Klik untuk membuka peta</a>
-            <p class="description">Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba ditujuan namun tidak ada tanda-tanda sedang dilangsungkan pernikahan, boleh jadi Anda salah jadwal atau salah tempat.</p>
+    <section id="info" class="info">      
+        <div class="container">
+          <div data-aos="fade-down"> 
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-10 text-center">
+              <h2>Informasi Acara</h2>
+              <p class="alamat">Alamat: JL. Jakarta Perum Korpri Blok CL No 18 RT 66 (Loa Bakung)</p>
+              <a href="https://goo.gl/maps/MeoWAmuLoQqp17Pr7" target="_blank" class="btn btn-light btn-sm my-3">Klik untuk membuka peta</a>
+              <p class="description">Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba ditujuan namun tidak ada tanda-tanda sedang dilangsungkan pernikahan, boleh jadi Anda salah jadwal atau salah tempat.</p>
+            </div>
+          </div>  
           </div>
-        </div>
-        <div class="row justify-content-center mt-4">
-          <div class="col-md-5 col-10">
-            <div class="card text-center text-bg-light">
-              <div class="card-header">Akad & Resepsi</div>
-              <div class="card-body">
-                <div class="row justify-content-center">
-                  <div class="col-md-6">
-                    <i class="bi bi-clock d-block"></i>
-                    <span>09.00 - 16.00</span>
-                  </div>
-                  <div class="col-md-6">
-                    <i class="bi bi-calendar3 d-block"></i>
-                    <span>Minggu, 27 April 2024</span>
+          <div data-aos="fade-up">
+            <div class="row justify-content-center mt-4">
+            <div class="col-md-5 col-10">
+              <div class="card text-center text-bg-light">
+                <div class="card-header">Akad & Resepsi</div>
+                <div class="card-body">
+                  <div class="row justify-content-center">
+                    <div class="col-md-6">
+                      <i class="bi bi-clock d-block"></i>
+                      <span>09.00 - 16.00</span>
+                    </div>
+                    <div class="col-md-6">
+                      <i class="bi bi-calendar3 d-block"></i>
+                      <span>Minggu, 27 April 2024</span>
+                    </div>
                   </div>
                 </div>
+                <div class="card-footer">Saat acara akad diharapkan untuk kondusif menjaga kehikmatan dan kehusyukan seluru prosesi.</div>
               </div>
-              <div class="card-footer">Saat acara akad & resepsi diharapkan untuk kondusif menjaga kehikmatan dan kehusyukan seluru prosesi.</div>
+            </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
-
+  
     <section id="story" class="story">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
-            <span>Bagaimana Kami Bertemu</span>
-            <h2>Our Story</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, quae! Autem illum aliquam nulla quidem?</p>
+            <div data-aos="fade-down">
+              <span>Bagaimana Kami Bertemu</span>
+              <h2>Our Story</h2>
+                <div data-aos="fade-up">
+                  <p>Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya dan Dia menjadikan di antaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir. <b>(QS. Ar Rum Ayat 21)</b></p>
+                </div>
+            </div>
           </div>
         </div>
 
         <div class="row">
           <div class="col">
             <ul class="timeline">
-              <li>
+              <div data-aos="fade-left">
+                <li>
                 <div class="timeline-image" style="background-image: url(https://picsum.photos/300/300)"></div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -160,8 +192,10 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, provident! Fuga maiores voluptas deserunt atque?</p>
                   </div>
                 </div>
-              </li>
-              <li class="timeline-inverted">
+                </li>
+              </div>
+              <div data-aos="fade-right">
+                <li class="timeline-inverted">
                 <div class="timeline-image" style="background-image: url(https://picsum.photos/301/301)"></div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -172,19 +206,22 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sint quasi illo at non impedit ducimus, quae itaque?</p>
                   </div>
                 </div>
-              </li>
-              <li>
-                <div class="timeline-image" style="background-image: url(https://picsum.photos/302/302)"></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h3>Menikah</h3>
-                    <span>27 April 2024</span>
+                </li>
+              </div>
+              <div data-aos="fade-left">
+                <li>
+                  <div class="timeline-image" style="background-image: url(https://picsum.photos/302/302)"></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h3>Menikah</h3>
+                      <span>27 April 2024</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse architecto cumque hic ipsum pariatur nihil error rem magnam earum eligendi.</p>
+                    </div>
                   </div>
-                  <div class="timeline-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse architecto cumque hic ipsum pariatur nihil error rem magnam earum eligendi.</p>
-                  </div>
-                </div>
-              </li>
+                </li>
+            </div>
             </ul>
           </div>
         </div>
@@ -193,64 +230,59 @@
 
     <section id="gallery" class="gallery">
         <div class="container">
+          <div data-aos="fade-down">
             <div class="row justify-content-center">
               <div class="col-md-8 col-10 text-center">
                 <span>Memori Kisah Kami</span>
                 <h2>Gallery Foto</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
               </div>
             </div>
-            
+          </div>
             <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
+              <div data-aos="fade-down">
                 <div class="col mt-3">
                     <a href="img/gallery/1.png" data-toggle="lightbox" data-gallery="example-gallery" data-caption="Dimas Prayogi & Khairiyani">
                         <img src="img/gallery/thumbnail/1.png" alt="thumbnail 1" class="img-fluid w-100 rounded">
                     </a>
                 </div>
+              </div>
+              <div data-aos="fade-up">
                 <div class="col mt-3">
                     <a href="img/gallery/2.png" data-toggle="lightbox" data-gallery="example-gallery" data-caption="Dimas Prayogi & Khairiyani">
                         <img src="img/gallery/thumbnail/2.png" alt="thumbnail 2" class="img-fluid w-100 rounded">
                     </a>
                 </div>
+              </div>
+              <div data-aos="fade-down">
                 <div class="col mt-3">
                     <a href="img/gallery/3.png" data-toggle="lightbox" data-gallery="example-gallery" data-caption="Dimas Prayogi & Khairiyani">
                         <img src="img/gallery/thumbnail/3.png" alt="thumbnail 3" class="img-fluid w-100 rounded">
                     </a>
                 </div>
+              </div>
+              <div data-aos="fade-right">
                 <div class="col mt-3">
                     <a href="img/gallery/4.png" data-toggle="lightbox" data-gallery="example-gallery" data-caption="Dimas Prayogi & Khairiyani">
                         <img src="img/gallery/thumbnail/4.png" alt="thumbnail 4" class="img-fluid w-100 rounded">
                     </a>
                 </div>
+              </div>
+              <div data-aos="fade-left">
                 <div class="col mt-3">
                     <a href="img/gallery/5.png" data-toggle="lightbox" data-gallery="example-gallery" data-caption="Dimas Prayogi & Khairiyani">
                         <img src="img/gallery/thumbnail/5.png" alt="thumbnail 5" class="img-fluid w-100 rounded">
                     </a>
                 </div>
+              </div> 
             </div>
-            <!-- <div class="row row-col-md-3 row-col-sm-2 row-col-1">
-                
-                
-            </div> -->
+    </section>
+    
+    <section id="footer" class="footer text-center pb-3">
+            <p><i class="bi bi-c-circle"></i>reated by Dims with <i class="bi bi-heart-fill"></i></p>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <!-- <script>
-      simplyCountdown(".simply-countdown", {
-        year: 2024, // required
-        month: 4, // required
-        day: 27, // required
-        hours: 8, // Default is 0 [0-23] integer
-        words: {
-          //words displayed into the countdown
-          days: { singular: "day", plural: "days" },
-          hours: { singular: "hour", plural: "hours" },
-          minutes: { singular: "minute", plural: "minutes" },
-          seconds: { singular: "second", plural: "seonds" },
-        },
-      });
-    </script> -->
-
+    
     <script>
       const stickyTop = document.querySelector(".sticky-top");
       const offCanvas = document.querySelector(".offcanvas");
@@ -264,5 +296,66 @@
       });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    
+    <script>
+        // Set the date for the countdown (YYYY, MM - 1, DD)
+        const weddingDate = new Date(2024, 3, 27);
+      
+        function updateCountdown() {
+          const now = new Date().getTime();
+          const timeRemaining = weddingDate - now;
+      
+          const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+      
+          document.getElementById("days").textContent = days.toString().padStart(2, "0");
+          document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+          document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+          document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+        }
+      
+        // Update the countdown every second
+        setInterval(updateCountdown, 1000);
+      
+        // Initial call to populate the countdown
+        updateCountdown();
+      </script>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const playButton = document.getElementById("playButton");
+          const audio = document.getElementById("myAudio");
+      
+          playButton.addEventListener("click", function() {
+            audio.play();
+          });
+        });
+      </script>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  window.addEventListener("scroll", function() {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  });
+
+  scrollToTopBtn.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
+        </script>
   </body>
 </html>
