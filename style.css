@@ -456,6 +456,7 @@ body {
 }
 /* mobile phone */
 @media (max-width: 576px) {
+ body,
   html {
     font-size: 60%;
     overflow-x: hidden;
