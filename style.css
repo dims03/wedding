@@ -4,7 +4,7 @@
   --shadow: 0 5px 5px rgb(0 0 0 / 0.7);
 }
 .scroll-to-top {
-  position: relative;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   color: var(--pink);
