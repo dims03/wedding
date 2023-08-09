@@ -16,31 +16,11 @@
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-
-.scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  color: var(--pink);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: none;
-  cursor: pointer;
-}
-
-=======
->>>>>>> 7fc7116c897293d91a83f0c2e7db7b1da32378e6
 .scroll-to-top i {
   font-size: 2rem;
   line-height: 40px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 7fc7116c897293d91a83f0c2e7db7b1da32378e6
 body {
   font-size: 1.2rem;
   min-height: 4000px;
@@ -376,7 +356,6 @@ body {
 .gallery {
   background-color: #f5f5f5;
 }
-<<<<<<< HEAD
 
 .countdown {
   display: flex;
@@ -406,8 +385,6 @@ body {
   font-family: "IBM Plex Serif", serif;
 }
 
-=======
->>>>>>> 7fc7116c897293d91a83f0c2e7db7b1da32378e6
 /* Media Query */
 
 /* Extra large */
@@ -459,11 +436,8 @@ body {
   html {
     font-size: 65%;
   }
-<<<<<<< HEAD
+
   .info {
-=======
-.info {
->>>>>>> 7fc7116c897293d91a83f0c2e7db7b1da32378e6
     padding-bottom: 15rem;
   }
   .mynavbar .nav-link {
@@ -484,13 +458,12 @@ body {
   html {
     font-size: 60%;
   }
-<<<<<<< HEAD
-=======
+
   .mynavbar {
-  background-color: rgba(255, 255, 255, 0.3) !important;
-  backdrop-filter: blur(5px);
-}
->>>>>>> 7fc7116c897293d91a83f0c2e7db7b1da32378e6
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(5px);
+  }
+
   .info {
     padding-bottom: 25rem;
   }
