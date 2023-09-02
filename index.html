@@ -23,7 +23,7 @@
     </div>
     <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
       <main>
-        <h4>Undangan</h4>
+        <h4>Kepada <span>Bapak/Ibu/Saudara/i, </span></h4>
         <h1>Dimas Prayogi & Khairiyani</h1>
         <p>Akan melangsungkan acara pernikahan</p>
         <div class="countdown">
@@ -356,5 +356,16 @@
 });
 
     </script>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const nama = urlParams.get('n')  || '';
+      const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+      // console.log(nama)
+
+      const namaContainer = document.querySelector('.hero h4 span');
+      namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
+    </script>
+    
   </body>
 </html>
