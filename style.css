@@ -246,7 +246,7 @@ body {
   top: 0;
   bottom: 0;
   position: absolute;
-  width: 1px;
+  width: 2px;
   background-color: #ccc;
   left: 50%;
 }
