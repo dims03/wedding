@@ -280,6 +280,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  border: 1px solid gray;
   border-radius: 50%;
   background-size: cover;
   background-position: center;
